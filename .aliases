@@ -9,7 +9,7 @@ i() {
     	mkdir $installs_log_path &>/dev/null
 
         for pkg in "$@"; do
-            echo "$pkg" >> $installs_log_path/apt_installs
+            echo "$pkg" >> $installs_log_path/apt-installs
         done
     else
         echo "Install failed. No packages were added to list."
@@ -21,7 +21,7 @@ si() {
         mkdir $installs_log_path &>/dev/null
 
         for pkg in "$@"; do
-            echo "$pkg" >> $installs_log_path/snap_installs
+            echo "$pkg" >> $installs_log_path/snap-installs
         done
     else
         echo "Install failed. No packages were added to list."
