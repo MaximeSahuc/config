@@ -16,6 +16,19 @@ i() {
     fi
 }
 
+di() {
+    echo "Installing.."
+    if sudo dnf install "$@"; then
+    	mkdir $installs_log_path &>/dev/null
+
+        for pkg in "$@"; do
+            echo "$pkg" >> $installs_log_path/dnf-installs
+        done
+    else
+        echo "Install failed. No packages were added to list."
+    fi
+}
+
 si() {
     if sudo snap install "$@"; then
         mkdir $installs_log_path &>/dev/null

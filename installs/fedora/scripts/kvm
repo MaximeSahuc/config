@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+dnf install @virtualization
+systemctl start libvirtd
+systemctl enable libvirtd
