@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+gnome-extensions disable dash-to-dock@micxgx.gmail.com
+gnome-extensions enable dash-to-dock@micxgx.gmail.com
