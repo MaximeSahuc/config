@@ -1,1 +1,5 @@
 alias sync='rsync -aAX --progress '
+
+mkcd () {
+    mkdir -p "$1" && cd "$_"
+}
