@@ -3,3 +3,6 @@ alias sync='rsync -aAX --progress '
 mkcd () {
     mkdir -p "$1" && cd "$_"
 }
+
+alias ls='ls --color=always'
+alias l='ls --color=always -lAh'
