@@ -13,6 +13,11 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+# Import aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 
 # User specific aliases and functions
 if [ -d ~/.custom/bashrc.d ]; then
