@@ -6,10 +6,10 @@ i() {
 
     echo "Installing.."
     if sudo apt install -y "$@"; then
-    	mkdir $installs_log_path &>/dev/null
+    	mkdir $installs_log_path/debian &>/dev/null
 
         for pkg in "$@"; do
-            echo "$pkg" >> $installs_log_path/apt-installs
+            echo "$pkg" >> $installs_log_path/debian/apt-installs
         done
     else
         echo "Install failed. No packages were added to list."
@@ -19,10 +19,10 @@ i() {
 di() {
     echo "Installing.."
     if sudo dnf install "$@"; then
-    	mkdir $installs_log_path &>/dev/null
+    	mkdir $installs_log_path/fedora &>/dev/null
 
         for pkg in "$@"; do
-            echo "$pkg" >> $installs_log_path/dnf-installs
+            echo "$pkg" >> $installs_log_path/fedora/dnf-installs
         done
     else
         echo "Install failed. No packages were added to list."
