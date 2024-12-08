@@ -19,3 +19,8 @@ xrandr
 xorg-x11-server-Xorg
 sensors
 openssh
+winetricks
+wine
+gimp
+dwebp
+mysql
