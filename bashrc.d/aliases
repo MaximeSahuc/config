@@ -1,0 +1,12 @@
+alias sync='rsync -aAX --progress '
+
+mkcd () {
+    mkdir -p "$1" && cd "$_"
+}
+
+alias ls='ls --color=always'
+alias l='ls --color=always -lAh'
+
+alias screenshot='gnome-screenshot -ca -f "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H-%M").jpg"'
+
+alias ipa='ip -br -c a'

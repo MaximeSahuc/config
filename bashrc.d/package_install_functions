@@ -1,0 +1,43 @@
+installs_log_path="$HOME/.custom/installs"
+
+i() {
+    echo "Updating sources.."
+    sudo apt update &>/dev/null
+
+    echo "Installing.."
+    if sudo apt install -y "$@"; then
+    	mkdir $installs_log_path/debian &>/dev/null
+
+        for pkg in "$@"; do
+            echo "$pkg" >> $installs_log_path/debian/apt-installs
+        done
+    else
+        echo "Install failed. No packages were added to list."
+    fi
+}
+
+di() {
+    echo "Installing.."
+    if sudo dnf install "$@"; then
+    	mkdir $installs_log_path/fedora &>/dev/null
+
+        for pkg in "$@"; do
+            echo "$pkg" >> $installs_log_path/fedora/dnf-installs
+        done
+    else
+        echo "Install failed. No packages were added to list."
+    fi
+}
+
+si() {
+    if sudo snap install "$@"; then
+        mkdir $installs_log_path &>/dev/null
+
+        for pkg in "$@"; do
+            echo "$pkg" >> $installs_log_path/snap-installs
+        done
+    else
+        echo "Install failed. No packages were added to list."
+    fi
+}
+
