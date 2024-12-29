@@ -18,6 +18,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Custom exports
+if [ -f ~/.exports ]; then
+    . ~/.exports
+fi
 
 # User specific aliases and functions
 if [ -d ~/.custom/bashrc.d ]; then
