@@ -8,7 +8,7 @@ echo "Creating new .bashrc synlink"
 ln -s ~/.custom/bashrc ~/.bashrc
 
 # create dotfiles symlinks
-for file in dotfiles/*; do
+for file in ~/.custom/dotfiles/*; do
   if [ -f "$file" ]; then
     fullsourcepath="$(pwd)/$file"
     filename="$(basename $file)"
