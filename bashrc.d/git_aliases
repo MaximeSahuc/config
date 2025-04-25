@@ -1,6 +1,11 @@
-alias gc='git commit -m'
+gc () {
+    read -p "Commit message: " COMMIT_MESSAGE
+    git commit -m "$COMMIT_MESSAGE"
+}
+
 alias ga='git add'
 alias gs='git status'
+alias gp='git push'
 
 git config --global color.ui always
 git config --global color.branch always
