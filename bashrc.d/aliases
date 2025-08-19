@@ -10,3 +10,5 @@ alias l='ls --color=always -lAh'
 alias screenshot='gnome-screenshot -ca -f "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H-%M").jpg"'
 
 alias ipa='ip -br -c a'
+alias vpn='sudo openvpn --config /etc/openvpn/client/config.ovpn --auth-user-pass /etc/openvpn/client/credentials.auth'
+alias download-website='wget -rxp -l 0 -e robots=off -U mozilla --convert-links --html-extension '

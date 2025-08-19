@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+sudo apt install -y \
+  fzf \
+  vim \
+  tree \
+  curl \
+  mpv \
+  wget \
+  tmux \
+  git \
+  flatpak \
+  ca-certificates \
+  htop \
+  btop \
+  neofetch \
+  vlc \
+  picocom \
+  python3 \
+  python3-pip \
+  tldr \
+  telnet \
+  nmap \
+  ffmpeg \
+  pipx \
+  lvm2 \
+  adb \
+  ufw \
+  meld \
+  ranger \
+  libpam-fprintd \

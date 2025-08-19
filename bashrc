@@ -32,3 +32,6 @@ if [ -d ~/.custom/bashrc.d ]; then
     done
 fi
 unset rc
+
+# Created by `pipx` on 2025-08-04 08:08:39
+export PATH="$PATH:/home/maxou/.local/bin"
