@@ -29,3 +29,8 @@ sudo apt install -y \
   meld \
   ranger \
   libpam-fprintd \
+  qemu-kvm \
+  libvirt-daemon-system \
+  libvirt-clients \
+  bridge-utils \
+  virt-manager

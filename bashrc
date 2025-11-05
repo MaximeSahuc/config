@@ -8,10 +8,7 @@ fi
 
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+export PATH="$HOME/.local/bin:$HOME/bin:/snap/bin/:$HOME/opt/zig-0.15.1/:$PATH"
 
 # Import aliases
 if [ -f ~/.bash_aliases ]; then
@@ -33,5 +30,6 @@ if [ -d ~/.custom/bashrc.d ]; then
 fi
 unset rc
 
-# Created by `pipx` on 2025-08-04 08:08:39
-export PATH="$PATH:/home/maxou/.local/bin"
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t default || tmux new-session -s default
+fi
